@@ -13,7 +13,7 @@ const moment = require('moment');
  */
 async function insertarPedidos(req , res) {
     
-    let data = req.body;
+    let data = req.body.data;
     logger.info(`Iniciamos la funcion insertarPedidos ${JSON.stringify(data)}`);
     let result;
     let responseData = [];
