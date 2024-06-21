@@ -89,6 +89,7 @@ async function insertarPedidos(req , res) {
                 .input('Observacion' , sql.VarChar(200), Observacion)
                 .output('ID', sql.Int)
                 .output('Insertado', sql.Int)
+                .output('ResultadoID', sql.VarChar)
                 .execute('insertaPedidoSP');
                 
                 result.idPedido = ID_Pedido;
