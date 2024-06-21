@@ -90,11 +90,9 @@ async function insertarPedidos(req , res) {
                 .output('ID', sql.Int)
                 .output('Insertado', sql.Int)
                 .output('ResultadoID', sql.VarChar)
+                .output('ResTipoDocumento', sql.VarChar)
                 .execute('insertaPedidoSP');
                 
-                result.idPedido = ID_Pedido;
-                result.tipoDocumento = TipoDocumento;
-
                 responseData.push(result);
                
                
