@@ -93,6 +93,7 @@ async function insertarPedidos(req , res) {
                 .output('ResTipoDocumento', sql.VarChar)
                 .execute('insertaPedidoSP');
                 
+                result.data = pedidos;
                 responseData.push(result);
                
                
